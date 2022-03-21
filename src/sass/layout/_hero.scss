@@ -1,0 +1,332 @@
+.hero {
+  display: flex;
+  width: auto;
+  height: 440px;
+  position: relative;
+  overflow: hidden;
+  background-color: getColor(bg-secondary);
+  padding: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    height: 306px;
+    overflow:visible;
+    padding: 11px 42px 0px 34px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 572px;
+    padding: 11px 115px;
+    max-width: 1280px;
+  }
+
+  &__main {
+    margin-bottom: 55px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 16;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: getColor(primary);
+    margin: 20px 0px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0px 0px;
+      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 25px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin: 78px 0px 25px 0px;
+      font-size: 38px;
+      line-height: 43px;
+    }
+  }
+
+  &__title-span {
+    z-index: 16;
+    font-size: 48px;
+    line-height: 48px;
+    color: getColor(decorative);
+
+    @media screen and (min-width: 768px) {
+      font-size: 34px;
+      line-height: 30px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 58px;
+      line-height: 52px;
+    }
+  }
+
+  &__btn {
+    height: 24px;
+    padding: 0px 12px;
+    border-radius: 12px;
+    font-size: 8px;
+    border: 0;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      line-height: 18px;
+      height: 40px;
+      padding: 0px 20px;
+      border-radius: 20px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    position: relative;
+    column-gap: 8px;
+    z-index: 17;
+
+    @media screen and (min-width: 1280px) {
+      column-gap: 15px;
+    }
+  }
+
+  &__img-ice {
+    z-index: 12;
+    position: absolute;
+    bottom: 0px;
+    right: 32px;
+    width: 171px;
+    height: 410px;
+
+    @media screen and (min-width: 768px) {
+      z-index: 102;
+      bottom: 0px;
+      right: 247px;
+      width: 143px;
+      height: 336px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      z-index: 102;
+      bottom: 0px;
+      right: 450px;
+      width: 236px;
+      height: 557px;
+    }
+  }
+  &__decorator {
+    z-index: 11;
+    content: '';
+    overflow: hidden;
+    position: absolute;
+    width: 343px;
+    height: 343px;
+    bottom: 72px;
+    right: -62px;
+    border-radius: 50%;
+    background-color: getColor(decorative-secondary);
+    color: getColor(decorative-secondary);
+
+    @media screen and (min-width: 768px) {
+      z-index: 101;
+      bottom: 46px;
+      right: 137px;
+      width: 322px;
+      height: 322px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      z-index: 101;
+      bottom: 75px;
+      right: 267px;
+      width: 538px;
+      height: 538px;
+    }
+  }
+
+  &__img-milk,
+  &__img-girl,
+  &__article,
+  &__event {
+    display: none;
+  }
+
+  &__img-milk {
+    @media screen and (min-width: 768px) {
+      display: initial;
+      z-index: 101;
+      position: absolute;
+      width: 124px;
+      height: 126px;
+      left: 34px;
+      bottom: 28px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 188px;
+      height: 191px;
+      left: 77px;
+      bottom: 45px;
+    }
+  }
+
+  &__article {
+    @media screen and (min-width: 768px) {
+      display: initial;
+      font-size: 8px;
+      line-height: 150%;
+      color: getColor(primary);
+      position: absolute;
+      width: 114px;
+      height: 48px;
+      left: 154px;
+      bottom: 59px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      line-height: 20px;
+      width: 200px;
+      height: 78px;
+      left: 295px;
+      bottom: 102px;
+    }
+  }
+
+  &__event {
+    @media screen and (min-width: 768px) {
+      display: initial;
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      padding: 0px;
+      left: 154px;
+      bottom: 34px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 26px;
+      height: 26px;
+      left: 295px;
+      bottom: 56px;
+    }
+  }
+  &__img-girl {
+    @media screen and (min-width: 768px) {
+      display: initial;
+      position: absolute;
+      width: 168px;
+      height: 133px;
+      right: 34px;
+      bottom: 0;
+      z-index: 111;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 293px;
+      height: 232px;
+      right: 109px;
+      bottom: 0px;
+    }
+  }
+
+  &__locals-list {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: initial;
+
+
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 60px;
+    }
+  }
+
+  &__locals-item {
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+
+  @media screen and (min-width: 768px) {
+      margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__locals-header {
+    position: sticky;
+    font-family: var(--secondary-font);
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 400;
+    color: getColor(decorative);
+    z-index: 100;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 46px;
+      line-height: 53px;
+    }
+  }
+
+  &__locals-subscribe {
+    text-transform: lowercase;
+    font-family: var(--primaty-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 10px;
+    color: getColor(primary);
+
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      color: getColor(primary);
+      background-color: getColor(primary);
+      top: -1px;
+      right: -10px;
+      z-index: 50;
+
+      @media screen and (min-width: 1280px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+.product-btn {
+  color: getColor(primary);
+  background-color: getColor(decorative);
+}
+
+.made-btn {
+  color: getColor(decorative);
+  background-color: getColor(primary);
+
+  &:hover,
+  &:focus {
+    background-color: getColor(button-hover);
+  }
+}
